@@ -17,3 +17,15 @@ Route::get('/menu/cliente', [ClienteController::class,'clientes'])->name('Client
 Route::get('/menu/tarjeta', [TarjetaController::class,''])->name('Tarjetas');
 
 Route::get('/menu/cliente/crear', [ClienteController::class,'crearClienteVista'])->name('crear-cliente');
+
+Route::post('/menu/cliente/crear/guardar', [ClienteController::class, 'guardarCliente'])->name('guardar-cliente');
+
+Route::get('/menu/cliente/ver/{dni}', [ClienteController::class, 'verCliente'])->name('ver-cliente');
+
+Route::get('/menu/cliente/editar/{dni}', [ClienteController::class,'editarClienteVista'])->name('editar-cliente');
+
+Route::get('/menu/cliente/editar/guardar/{dni}', [ClienteController::class,'editarCliente'])->name('guardar-cliente-editado');
+
+Route::get('/menu/clientes/eliminar/{dni}', [ClienteController::class,'eliminarCliente'])->name('eliminar-cliente');
+
+Route::get('/menu/clientes/destroy/{dni}', [ClienteController::class, 'destroyCliente'])->name('destroy-cliente');

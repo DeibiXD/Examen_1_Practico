@@ -18,7 +18,8 @@
             <div></div>
             <div class="card" style="width: 18rem">
                 <div class="card-body">
-                    <form action="#"  method="post">
+                    <form action="{{ route('guardar-cliente') }}"  method="post">
+                        @csrf <!-- {{ csrf_field() }}-->
                         <div class="mb-3">
                             <label for="nombre" class="form-label">DNI</label>
                             <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni">
@@ -41,7 +42,7 @@
                         </div>
         
                         <div class="mb-3">
-                            <a href="#" class="btn btn-secondary">Volver</a>
+                            <a href="{{ route('Clientes') }}" class="btn btn-secondary">Volver</a>
                             <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
         

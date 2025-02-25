@@ -45,13 +45,13 @@
                     <td>{{$cliente->correo}}</td>
 
                     <td class="action-buttons">
-                        <a href="" class="btn btn-primary btn-sm">
+                        <a href="{{ route('editar-cliente',$cliente->dni) }}" class="btn btn-primary btn-sm">
                             Editar
                         </a>
-                        <a href="" class="btn btn-info btn-sm">                            
+                        <a href="{{ route('ver-cliente', $cliente->dni) }}" class="btn btn-info btn-sm">
                             Visualizar
                         </a>
-                        <a href="" class="btn btn-danger btn-sm">
+                        <a href="{{ route('eliminar-cliente',$cliente->dni) }}" class="btn btn-danger btn-sm">
                             Eliminar
                         </a>
                     </td>

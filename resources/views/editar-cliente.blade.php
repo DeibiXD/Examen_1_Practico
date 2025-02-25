@@ -18,30 +18,32 @@
             <div></div>
             <div class="card" style="width: 18rem">
                 <div class="card-body">
-                    <form action="#"  method="post">
+                    <form action="{{ route('guardar-cliente-editado',$cliente->dni) }}"  method="put">
+                        @csrf
+                        @method('PUT')
                         <div class="mb-3">
                             <label for="nombre" class="form-label">DNI</label>
-                            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" readonly>
+                            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" readonly value="{{ $cliente->dni }}">
                         </div>
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="nombre" name="nombre">
+                            <input type="text" class="form-control" id="nombre" placeholder="nombre" name="nombre" value="{{ $cliente->nombre }}">
                         </div>
                         <div class="mb-3">
                             <label for="apellido" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" id="apellido" placeholder="apellido" name="apellido">
+                            <input type="text" class="form-control" id="apellido" placeholder="apellido" name="apellido" value="{{ $cliente->apellido }}">
                         </div>
                         <div class="mb-3">
                             <label for="sueldo" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" id="telefono" placeholder="telefono" name="telefono">
+                            <input type="text" class="form-control" id="telefono" placeholder="telefono" name="telefono" value="{{ $cliente->telefono }}">
                         </div>
                         <div class="mb-3">
                             <label for="sueldo" class="form-label">Correo</label>
-                            <input type="email" class="form-control" id="correo" placeholder="correo" name="correo">
+                            <input type="email" class="form-control" id="correo" placeholder="correo" name="correo" value="{{ $cliente->correo }}">
                         </div>
         
                         <div class="mb-3">
-                            <a href="#" class="btn btn-secondary">Volver</a>
+                            <a href="{{ route('Clientes') }}" class="btn btn-secondary">Volver</a>
                             <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
         

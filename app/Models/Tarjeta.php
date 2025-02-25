@@ -8,7 +8,7 @@ class Tarjeta extends Model
 {
     //
 
-    protected $primaryKey = 'codigoProducto';
+    protected $primaryKey = 'numeroTarjeta';
 
     public $timestamps = false;
 
