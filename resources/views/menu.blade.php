@@ -21,7 +21,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Administracion de clientes</h5>
                   <p class="card-text">Administre Clientes.</p>
-                  <a href="#" class="btn btn-primary">Clientes</a>
+                  <a href="{{ route('Clientes') }}" class="btn btn-primary">Clientes</a>
                 </div>
               </div>
             </div>
@@ -30,7 +30,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Administracion de tarjetas</h5>
                   <p class="card-text">Administre tarjetas.</p>
-                  <a href="#" class="btn btn-primary">Tarjetas</a>
+                  <a href="{{ route('Tarjetas') }}" class="btn btn-primary">Tarjetas</a>
                 </div>
               </div>
             </div>

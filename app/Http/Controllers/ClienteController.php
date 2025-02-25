@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\Cliente;
-class clienteController extends Controller
+
+class ClienteController extends Controller
 {
     //
-
     public function clientes()
     {
         $clientes = Cliente::all();
@@ -16,7 +17,7 @@ class clienteController extends Controller
     }
 
     public function crearClienteVista(){
-        return view('crearCliente');
+        return view('crear-cliente');
     }
 
     public function guardarCliente(Request $request){
@@ -24,6 +25,4 @@ class clienteController extends Controller
         
 
     }
-
-
 }
