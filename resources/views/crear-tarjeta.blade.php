@@ -18,7 +18,9 @@
             <div></div>
             <div class="card" style="width: 18rem">
                 <div class="card-body">
-                    <form action="#"  method="post">
+                    <form action="{{ route('guardar-tarjeta') }}"  method="post">
+                        @csrf
+                        @method('POST')
                         <div class="mb-3">
                             <label for="nombre" class="form-label">CVV</label>
                             <input type="text" class="form-control" id="cvv" placeholder="CVV" name="cvv">

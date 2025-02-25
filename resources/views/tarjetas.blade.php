@@ -13,7 +13,7 @@
 <body>
     <div class="d-flex justify-content-between mb-3">
             
-        <a href="#" class="btn btn-primary">
+        <a href="{{ route('crear-tarjeta') }}" class="btn btn-primary">
             <i class="fa-solid fa-plus"></i>
             Crear Tarjeta
         </a>

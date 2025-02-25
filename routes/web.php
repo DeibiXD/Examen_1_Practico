@@ -29,3 +29,7 @@ Route::get('/menu/cliente/editar/guardar/{dni}', [ClienteController::class,'edit
 Route::get('/menu/clientes/eliminar/{dni}', [ClienteController::class,'eliminarCliente'])->name('eliminar-cliente');
 
 Route::get('/menu/clientes/destroy/{dni}', [ClienteController::class, 'destroyCliente'])->name('destroy-cliente');
+
+Route::get('/menu/tarjeta/crear', [TarjetaController::class,'crearTarjetaVista'])->name('crear-tarjeta');
+
+Route::post('/menu/tarjeta/crear/guardar', [TarjetaController::class, 'guardarTarjeta'])->name('guardar-tarjeta');
